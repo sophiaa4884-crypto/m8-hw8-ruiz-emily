@@ -131,11 +131,10 @@ footer {
   padding: 24px 0;
   color: var(--off-white);
 }
-/* ===== Mobile fixes (≤ 500px) ===== */
+
 @media (max-width: 500px) {
 
-  /* 1) Header links match mock: stack, center, good tap targets */
-  header { padding: 16px 0; } /* less vertical bulk */
+  header { padding: 16px 0; }
   nav {
     flex-direction: column;
     align-items: center;
@@ -147,57 +146,52 @@ footer {
     width: 100%;
     max-width: 320px;
     text-align: center;
-    padding: 10px 12px;  /* bigger tap area */
-    margin: 0;           /* override desktop spacing */
+    padding: 10px 12px; 
+    margin: 0;         
     line-height: 1.2;
   }
   nav > a.logo {
-    margin-right: 0;     /* undo desktop auto-push */
+    margin-right: 0;
   }
   nav > a:not(:first-of-type){
-    margin-left: 0;      /* undo desktop left spacing between links */
+    margin-left: 0;
   }
 
-  /* 2) Article padding: comfortable gutters */
   main article {
-    padding: 16px 14px;  /* from 48px 96px */
+    padding: 16px 14px; 
   }
 
-  /* 3) Hero text: not oversized on phones */
   main > section.hero {
-    height: 260px;       /* slightly shorter hero on small screens */
+    height: 260px;     
     padding: 0 12px;
   }
   section.hero > .call-to-action {
     font-size: clamp(1rem, 4.6vw, 1.2rem);
     line-height: 1.45;
-    padding: 0 8px;      /* reduce side padding */
+    padding: 0 8px;
     margin: 0 0 8px 0;
-    text-shadow: none;   /* optional: reduces glare on tiny screens */
+    text-shadow: none;
   }
   section.hero > button {
     font-size: 1rem;
     padding: 10px 14px;
   }
 
-  /* 4) Center the image embedded in the article text */
   main > article img {
-    float: none;             /* remove float */
+    float: none;     
     display: block;
     max-width: 100%;
     height: auto;
-    margin: 12px auto;       /* centers image */
+    margin: 12px auto;  
   }
 
-  /* 5) Decrease bottom margin on page sections */
   main > section,
   main > article {
-    margin-bottom: 24px;     /* from 96px */
-    box-shadow: 2px 2px 6px var(--gray); /* optional: soften shadow on mobile */
+    margin-bottom: 24px;  
+    box-shadow: 2px 2px 6px var(--gray);
   }
 
-  /* Optional niceties: improve text rhythm & prevent sideways scroll */
-  main p { margin-bottom: 24px; } /* tighter than 48px */
-  h1 { font-size: 2rem; }         /* gentle scale-down for small screens */
+  main p { margin-bottom: 24px; }
+  h1 { font-size: 2rem; }    
   body { overflow-x: hidden; }
 }
